@@ -1,0 +1,19 @@
+{
+  "name": "baccc_guides",
+  "version": "1.0.0",
+  "description": "Jekyll site for guides to the BACCC NETLAB+ system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github_cabrillodatacenter:cabrillodatacenter/baccc_guides.git"
+  },
+  "author": "Michael T. Wescoat",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-git": "^1.0.4"
+  }
+}
