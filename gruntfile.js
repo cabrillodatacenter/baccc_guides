@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
   "use strict";
-  
-  var cwd = "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/";
+
+  var directory = "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/";
 
   grunt.initConfig({
 
@@ -10,7 +10,7 @@ module.exports = function (grunt) {
       task: {
         options: {
           all: true,
-          cwd: cwd
+          cwd: directory
         }
       }
     },
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         options: {
           message: "Repository updated on <%= grunt.template.today() %>",
           allowEmpty: true,
-          cwd: cwd
+          cwd: directory
         }
       }
     },
@@ -32,12 +32,14 @@ module.exports = function (grunt) {
         options: {
           remote: "origin",
           branch: "master",
-          cwd: cwd
+          cwd: directory
         }
       }
     }
   });
 
   grunt.loadNpmTasks("grunt-git");
+
+  grunt.registerTask("git", ["gitadd", "gitcommit", "gitpush"]);
 };
 
