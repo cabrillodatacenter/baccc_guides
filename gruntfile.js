@@ -17,13 +17,13 @@ module.exports = function (grunt) {
 
     // git commit -m "Repository updated on <current date time>"
     gitcommit: {
-      task: {
+//      task: {
         options: {
-          message: "Repository updated on  <%= grunt.template.today() %>",
+          message: "Repository updated on <%= grunt.template.today() %>",
           allowEmpty: true,
           cwd: "<%= cwd %>"
         }
-      }
+//      }
     },
 
     // git push origin master
