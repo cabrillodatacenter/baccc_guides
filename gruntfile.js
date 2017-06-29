@@ -3,12 +3,14 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
+	cwd: "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/",
+
     // git add .
     gitadd: {
       task: {
         options: {
           all: true,
-          cwd: "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/"
+          cwd: "<%= cwd %>"
         }
       }
     },
@@ -19,7 +21,7 @@ module.exports = function (grunt) {
         options: {
           message: "Repository updated on <%= grunt.template.today() %>",
           allowEmpty: true,
-          cwd: "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/"
+          cwd: "<%= cwd %>"
         }
       }
     },
@@ -30,7 +32,7 @@ module.exports = function (grunt) {
         options: {
           remote: "origin",
           branch: "master",
-          cwd: "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/"
+          cwd: "<%= cwd %>"
         }
       }
     }
