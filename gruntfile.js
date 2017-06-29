@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     gitcommit: {
       task: {
         options: {
-          message: "Repository updated on " + grunt.template.today(),
+          message: "Repository updated on <%= grunt.template.today() %>",
           allowEmpty: true,
           cwd: "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/"
         }
@@ -37,6 +37,5 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks("grunt-git");
-
 };
 
