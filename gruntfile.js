@@ -1,29 +1,29 @@
 module.exports = function (grunt) {
   "use strict";
+  
+  var cwd = "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/";
 
   grunt.initConfig({
-
-	cwd: "/Users/mtw/Projects/cabrillodatacenter/baccc_guides/",
 
     // git add .
     gitadd: {
       task: {
         options: {
           all: true,
-          cwd: "<%= cwd %>"
+          cwd: cwd
         }
       }
     },
 
     // git commit -m "Repository updated on <current date time>"
     gitcommit: {
-//      task: {
+      task: {
         options: {
           message: "Repository updated on <%= grunt.template.today() %>",
           allowEmpty: true,
-          cwd: "<%= cwd %>"
+          cwd: cwd
         }
-//      }
+      }
     },
 
     // git push origin master
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         options: {
           remote: "origin",
           branch: "master",
-          cwd: "<%= cwd %>"
+          cwd: cwd
         }
       }
     }
